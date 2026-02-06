@@ -106,6 +106,20 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-surface/30" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+          {/* Hero Crown */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mb-8"
+          >
+            <svg className="w-20 h-16 sm:w-24 sm:h-20 text-gold" viewBox="0 0 80 60" fill="none">
+              <path d="M8 52L18 18L32 36L40 10L48 36L62 18L72 52" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M8 52H72" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+              <path d="M12 58H68" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
+            </svg>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

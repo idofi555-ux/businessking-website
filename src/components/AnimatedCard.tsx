@@ -16,7 +16,7 @@ export default function AnimatedCard({ children, delay = 0, className = '' }: An
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay }}
-      className={`bg-surface border border-[rgba(255,255,255,0.06)] rounded-2xl p-10 sm:p-12 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 ${className}`}
+      className={`bg-surface border border-[rgba(255,255,255,0.06)] rounded-2xl p-10 sm:p-12 transition-all duration-200 hover:border-gold/20 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 ${className}`}
     >
       {children}
     </motion.div>

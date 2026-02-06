@@ -39,23 +39,16 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            {/* BK Monogram */}
-            <div className="relative w-9 h-9 flex items-center justify-center">
-              {/* Crown accent — 3 small peaks above the monogram */}
-              <svg className="absolute -top-[5px] left-1/2 -translate-x-1/2 w-5 h-[6px] text-gold opacity-80 group-hover:opacity-100 transition-opacity" viewBox="0 0 20 6" fill="none">
-                <path d="M1 5L4 1.5L7 4L10 1L13 4L16 1.5L19 5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <div className="w-9 h-9 rounded-lg border border-gold/40 group-hover:border-gold/70 flex items-center justify-center transition-all duration-200">
-                <span className="text-gold text-[13px] font-semibold tracking-tight">BK</span>
-              </div>
-            </div>
+            {/* Crown Icon */}
+            <svg className="w-7 h-6 text-gold group-hover:scale-105 transition-transform duration-200" viewBox="0 0 80 60" fill="none">
+              <path d="M8 52L18 18L32 36L40 10L48 36L62 18L72 52" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M8 52H72" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+              <path d="M12 58H68" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+            </svg>
             {/* Text */}
             <div className="flex flex-col leading-none">
-              <span className="text-primary text-[15px] font-semibold tracking-[0.08em]">
+              <span className="text-primary text-[15px] font-semibold tracking-[0.12em]">
                 BUSINESS <span className="text-gold">KING</span>
-              </span>
-              <span className="text-tertiary text-[9px] tracking-[0.25em] uppercase mt-0.5">
-                The King of Connections
               </span>
             </div>
           </Link>

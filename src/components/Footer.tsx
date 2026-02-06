@@ -31,15 +31,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="inline-flex items-center gap-3 mb-5">
-              <div className="relative w-8 h-8 flex items-center justify-center">
-                <svg className="absolute -top-[4px] left-1/2 -translate-x-1/2 w-4 h-[5px] text-gold opacity-70" viewBox="0 0 20 6" fill="none">
-                  <path d="M1 5L4 1.5L7 4L10 1L13 4L16 1.5L19 5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                <div className="w-8 h-8 rounded-lg border border-gold/30 flex items-center justify-center">
-                  <span className="text-gold text-[12px] font-semibold tracking-tight">BK</span>
-                </div>
-              </div>
-              <span className="text-primary font-semibold text-[15px] tracking-[0.08em]">
+              <svg className="w-6 h-5 text-gold" viewBox="0 0 80 60" fill="none">
+                <path d="M8 52L18 18L32 36L40 10L48 36L62 18L72 52" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M8 52H72" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M12 58H68" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+              </svg>
+              <span className="text-primary font-semibold text-[15px] tracking-[0.12em]">
                 BUSINESS <span className="text-gold">KING</span>
               </span>
             </Link>

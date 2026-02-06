@@ -6,9 +6,9 @@
 
 :root {
   --gold: #D4A853;
-  --background: #1C2030;
-  --surface: #252A3A;
-  --elevated: #2E3446;
+  --background: #162B22;
+  --surface: #1D3A2C;
+  --elevated: #254A36;
   --border: rgba(255,255,255,0.06);
 }
 
@@ -26,6 +26,8 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
   line-height: 1.7;
+  background-image: radial-gradient(circle, rgba(45, 80, 60, 0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 ::selection {
@@ -48,7 +50,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3d4a;
+  background: #2d5a3e;
 }
 
 /* Gold text utility */
