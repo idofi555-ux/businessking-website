@@ -8,9 +8,9 @@
   --gold: #FCB536;
   --gold-light: #FFD966;
   --gold-dark: #E6A020;
-  --dark-bg: #0a0a0f;
-  --dark-card: #111118;
-  --dark-surface: #1a1a24;
+  --dark-bg: #161626;
+  --dark-card: #1c1c2e;
+  --dark-surface: #242435;
 }
 
 * {
@@ -23,7 +23,7 @@ html {
 
 body {
   background-color: var(--dark-bg);
-  color: #e0e0e0;
+  color: #e8e8ee;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
@@ -39,11 +39,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #161626;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a34;
+  background: #3a3a4a;
   border-radius: 4px;
 }
 
@@ -83,7 +83,7 @@ body {
 
 /* Glass card effect */
 .glass-card {
-  background: rgba(17, 17, 24, 0.7);
+  background: rgba(28, 28, 46, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(252, 181, 54, 0.1);
