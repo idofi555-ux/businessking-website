@@ -30,8 +30,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <Link href="/" className="inline-block mb-5">
-              <span className="text-primary font-semibold text-lg tracking-wide">
+            <Link href="/" className="inline-flex items-center gap-3 mb-5">
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <svg className="absolute -top-[4px] left-1/2 -translate-x-1/2 w-4 h-[5px] text-gold opacity-70" viewBox="0 0 20 6" fill="none">
+                  <path d="M1 5L4 1.5L7 4L10 1L13 4L16 1.5L19 5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <div className="w-8 h-8 rounded-lg border border-gold/30 flex items-center justify-center">
+                  <span className="text-gold text-[12px] font-semibold tracking-tight">BK</span>
+                </div>
+              </div>
+              <span className="text-primary font-semibold text-[15px] tracking-[0.08em]">
                 BUSINESS <span className="text-gold">KING</span>
               </span>
             </Link>
