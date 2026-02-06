@@ -91,7 +91,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} bg-dark-500 text-gray-200 antialiased`}>
+      <body className={`${inter.className} bg-background text-primary antialiased`}>
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />

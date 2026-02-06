@@ -2,12 +2,31 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import AnimatedCard from '@/components/AnimatedCard';
+import {
+  Search,
+  BarChart3,
+  Share2,
+  Users,
+  Target,
+  Brain,
+  Cpu,
+  Check,
+  ArrowRight,
+  ArrowUpRight,
+} from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
-const services = [
+const services: {
+  id: string;
+  icon: LucideIcon;
+  title: string;
+  shortTitle: string;
+  description: string;
+  features: { name: string; desc: string }[];
+}[] = [
   {
     id: 'seo',
-    icon: '🔍',
+    icon: Search,
     title: 'Search Engine Optimization',
     shortTitle: 'SEO',
     description:
@@ -41,7 +60,7 @@ const services = [
   },
   {
     id: 'strategy',
-    icon: '📊',
+    icon: BarChart3,
     title: 'Marketing Strategy & Consulting',
     shortTitle: 'Strategy & Consulting',
     description:
@@ -63,7 +82,7 @@ const services = [
   },
   {
     id: 'content',
-    icon: '✍️',
+    icon: Share2,
     title: 'Content & Social Media Marketing',
     shortTitle: 'Content & Social',
     description:
@@ -85,7 +104,7 @@ const services = [
   },
   {
     id: 'affiliate',
-    icon: '🤝',
+    icon: Users,
     title: 'Affiliate Marketing',
     shortTitle: 'Affiliate Marketing',
     description:
@@ -107,7 +126,7 @@ const services = [
   },
   {
     id: 'ppc',
-    icon: '🎯',
+    icon: Target,
     title: 'PPC & Ads Arbitrage',
     shortTitle: 'PPC & Ads Arbitrage',
     description:
@@ -133,7 +152,7 @@ const services = [
   },
   {
     id: 'ai-marketing',
-    icon: '🧠',
+    icon: Brain,
     title: 'AI Marketing Solutions',
     shortTitle: 'AI Marketing',
     description:
@@ -159,7 +178,7 @@ const services = [
   },
   {
     id: 'ai-technology',
-    icon: '⚡',
+    icon: Cpu,
     title: 'AI Technology Solutions',
     shortTitle: 'AI Technology',
     description:
@@ -189,23 +208,21 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative">
-        <div className="absolute inset-0 bg-dark-gradient" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-radial-gold opacity-20" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="pt-32 pb-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-gold-500 bg-gold-500/10 border border-gold-500/20 mb-6">
+            <span className="inline-block text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-5">
               Our Services
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Our <span className="text-gold-gradient">Services</span>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-primary mb-5">
+              Our <span className="text-gold">Services</span>
             </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-secondary text-base sm:text-lg max-w-2xl mx-auto">
               Comprehensive digital marketing and AI solutions engineered for businesses
               that demand excellence.
             </p>
@@ -218,52 +235,56 @@ export default function ServicesPage() {
         <section
           key={service.id}
           id={service.id}
-          className={`py-20 sm:py-28 relative ${
-            idx % 2 === 0 ? '' : 'bg-dark-300/30'
+          className={`py-24 sm:py-32 ${
+            idx % 2 === 0 ? '' : 'border-y border-[rgba(255,255,255,0.06)]'
           }`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-start">
               {/* Left: Info */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5 }}
               >
-                <div className="text-5xl mb-6">{service.icon}</div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                <service.icon size={24} strokeWidth={1.5} className="text-gold mb-5" />
+                <h2 className="text-3xl sm:text-4xl font-semibold text-primary mb-4">
                   {service.title}
                 </h2>
-                <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                <p className="text-secondary text-base leading-relaxed mb-8">
                   {service.description}
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-block px-6 py-3 bg-gold-gradient text-dark-500 font-semibold rounded-lg hover:shadow-lg hover:shadow-gold-500/25 transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-gold text-background font-medium rounded-lg hover:bg-gold-600 transition-colors duration-200 text-sm"
                 >
-                  Get Started →
+                  Get Started
+                  <ArrowRight size={14} strokeWidth={2} />
                 </Link>
               </motion.div>
 
               {/* Right: Features */}
               <div className="space-y-4">
                 {service.features.map((feature, i) => (
-                  <AnimatedCard key={feature.name} delay={i * 0.1} className="!p-6">
+                  <motion.div
+                    key={feature.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.5, delay: i * 0.06 }}
+                    className="bg-surface border border-[rgba(255,255,255,0.06)] rounded-xl p-6 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)]"
+                  >
                     <div className="flex items-start gap-4">
-                      <div className="w-8 h-8 rounded-lg bg-gold-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="text-gold-500 text-sm font-bold">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                      </div>
+                      <Check size={16} strokeWidth={2} className="text-gold mt-1 flex-shrink-0" />
                       <div>
-                        <h3 className="text-white font-semibold mb-2">{feature.name}</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <h3 className="text-primary font-medium mb-1 text-sm">{feature.name}</h3>
+                        <p className="text-tertiary text-sm leading-relaxed">
                           {feature.desc}
                         </p>
                       </div>
                     </div>
-                  </AnimatedCard>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -272,28 +293,28 @@ export default function ServicesPage() {
       ))}
 
       {/* CTA */}
-      <section className="py-24 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 sm:py-40">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center glass-card rounded-3xl p-12 sm:p-16 border border-gold-500/20"
+            transition={{ duration: 0.5 }}
+            className="text-center"
           >
-            <div className="text-5xl mb-6">👑</div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Need a Custom <span className="text-gold-gradient">Solution?</span>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-primary mb-5">
+              Need a Custom <span className="text-gold">Solution?</span>
             </h2>
-            <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-secondary text-base sm:text-lg mb-8 max-w-xl mx-auto">
               Every business is unique. Let&apos;s discuss a tailored strategy that
               fits your exact needs and goals.
             </p>
             <Link
               href="/contact"
-              className="inline-block px-10 py-4 bg-gold-gradient text-dark-500 font-semibold rounded-xl hover:shadow-xl hover:shadow-gold-500/25 transition-all duration-300 hover:scale-105 text-lg"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-background font-medium rounded-lg hover:bg-gold-600 transition-colors duration-200"
             >
-              Let&apos;s Talk →
+              Let&apos;s Talk
+              <ArrowUpRight size={16} strokeWidth={2} />
             </Link>
           </motion.div>
         </div>

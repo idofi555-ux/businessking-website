@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 
 interface SectionHeadingProps {
-  badge?: string;
+  label?: string;
   title: string;
   goldText?: string;
   description?: string;
@@ -11,7 +11,7 @@ interface SectionHeadingProps {
 }
 
 export default function SectionHeading({
-  badge,
+  label,
   title,
   goldText,
   description,
@@ -22,20 +22,20 @@ export default function SectionHeading({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       className={`mb-16 ${center ? 'text-center' : ''}`}
     >
-      {badge && (
-        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-gold-500 bg-gold-500/10 border border-gold-500/20 mb-6">
-          {badge}
+      {label && (
+        <span className="inline-block text-xs font-medium uppercase tracking-[0.2em] text-secondary mb-5">
+          {label}
         </span>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+      <h2 className="text-3xl sm:text-4xl font-semibold text-primary mb-5 leading-tight">
         {title}{' '}
-        {goldText && <span className="text-gold-gradient">{goldText}</span>}
+        {goldText && <span className="text-gold">{goldText}</span>}
       </h2>
       {description && (
-        <p className={`text-gray-400 text-lg leading-relaxed ${center ? 'max-w-2xl mx-auto' : 'max-w-2xl'}`}>
+        <p className={`text-secondary text-base sm:text-lg leading-relaxed ${center ? 'max-w-2xl mx-auto' : 'max-w-2xl'}`}>
           {description}
         </p>
       )}

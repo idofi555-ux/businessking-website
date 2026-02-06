@@ -12,12 +12,11 @@ interface AnimatedCardProps {
 export default function AnimatedCard({ children, delay = 0, className = '' }: AnimatedCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay }}
-      whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className={`glass-card rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/5 ${className}`}
+      className={`bg-surface border border-[rgba(255,255,255,0.06)] rounded-2xl p-10 sm:p-12 transition-all duration-200 hover:border-[rgba(255,255,255,0.12)] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20 ${className}`}
     >
       {children}
     </motion.div>
