@@ -35,21 +35,12 @@ export const metadata: Metadata = {
     title: 'Business King — The King of Connections',
     description:
       'Premier digital marketing agency specializing in SEO, PPC, affiliate marketing, content marketing, and strategic consulting.',
-    images: [
-      {
-        url: '/api/og',
-        width: 1200,
-        height: 630,
-        alt: 'Business King — The King of Connections',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Business King — The King of Connections',
     description:
       'Premier digital marketing agency specializing in SEO, PPC, affiliate marketing, content marketing, and strategic consulting.',
-    images: ['/api/og'],
   },
   robots: {
     index: true,
@@ -61,10 +52,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  icons: {
-    icon: '/favicon.svg',
-    apple: '/favicon.svg',
   },
 };
 
