@@ -6,7 +6,9 @@ const footerLinks = {
     { label: 'Marketing Strategy', href: '/services#strategy' },
     { label: 'Content & Social Media', href: '/services#content' },
     { label: 'Affiliate Marketing', href: '/services#affiliate' },
-    { label: 'PPC Ads Arbitrage', href: '/services#ppc' },
+    { label: 'PPC & Ads Arbitrage', href: '/services#ppc' },
+    { label: 'AI Marketing', href: '/services#ai-marketing' },
+    { label: 'AI Technology', href: '/services#ai-technology' },
   ],
   Company: [
     { label: 'Home', href: '/' },

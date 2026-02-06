@@ -108,22 +108,78 @@ const services = [
   {
     id: 'ppc',
     icon: '🎯',
-    title: 'PPC Ads Arbitrage',
-    shortTitle: 'PPC Arbitrage',
+    title: 'PPC & Ads Arbitrage',
+    shortTitle: 'PPC & Ads Arbitrage',
     description:
-      'Maximize your advertising ROI with precision-targeted campaigns across Google Ads, Meta, and beyond. We turn ad spend into exponential revenue.',
+      'Acquire targeted traffic at lower cost and discover profitable niches through strategic ad arbitrage across Google Ads, Meta, native ad networks, and beyond.',
     features: [
       {
-        name: 'Keyword Research & Targeting',
-        desc: 'Identify profitable keywords and audience segments with laser-focused targeting that minimizes waste and maximizes conversions.',
+        name: 'Traffic Arbitrage',
+        desc: 'Source high-quality traffic at lower cost through strategic arbitrage across multiple ad networks and platforms.',
       },
       {
-        name: 'Ad Creatives and Copywriting',
+        name: 'Ad Creatives & Copywriting',
         desc: 'Compelling ad copy and visuals that stop the scroll, capture attention, and drive clicks that convert.',
       },
       {
         name: 'Campaign Optimization & Scaling',
         desc: 'Continuous A/B testing, bid management, and scaling strategies that compound your advertising returns over time.',
+      },
+      {
+        name: 'Niche Discovery',
+        desc: 'Identify untapped profitable niches and verticals before the competition, giving you first-mover advantage.',
+      },
+    ],
+  },
+  {
+    id: 'ai-marketing',
+    icon: '🧠',
+    title: 'AI Marketing Solutions',
+    shortTitle: 'AI Marketing',
+    description:
+      'Leverage artificial intelligence to supercharge your marketing. From predictive analytics to automated campaign optimization, AI gives you an unfair advantage.',
+    features: [
+      {
+        name: 'Predictive Analytics',
+        desc: 'AI models that forecast customer behavior, market trends, and campaign performance before you spend a dollar.',
+      },
+      {
+        name: 'Smart Audience Targeting',
+        desc: 'Machine learning algorithms that identify your ideal customers and optimize targeting in real-time across platforms.',
+      },
+      {
+        name: 'AI Content Generation',
+        desc: 'Generate high-converting ad copy, social content, and email campaigns at scale with brand-consistent AI.',
+      },
+      {
+        name: 'Automated Optimization',
+        desc: 'AI continuously monitors and adjusts bids, budgets, and targeting to maximize ROI — 24/7, no manual tweaks needed.',
+      },
+    ],
+  },
+  {
+    id: 'ai-technology',
+    icon: '⚡',
+    title: 'AI Technology Solutions',
+    shortTitle: 'AI Technology',
+    description:
+      'Custom AI agents, intelligent automation, and data intelligence solutions that transform how your business operates. Scalable, secure, and built to last.',
+    features: [
+      {
+        name: 'Custom AI Agents',
+        desc: 'Purpose-built AI assistants for your specific workflows — from customer service to sales enablement to internal operations.',
+      },
+      {
+        name: 'Intelligent Automation',
+        desc: 'Automate complex business processes with AI that understands context, handles exceptions, and learns from every interaction.',
+      },
+      {
+        name: 'Data Intelligence',
+        desc: 'Transform raw data into actionable insights with AI-powered analytics, pattern recognition, and predictive modeling.',
+      },
+      {
+        name: 'AI Integration',
+        desc: 'Seamlessly embed AI capabilities into your existing tech stack with APIs, webhooks, and custom integrations.',
       },
     ],
   },
@@ -147,11 +203,11 @@ export default function ServicesPage() {
               Our Services
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Royal <span className="text-gold-gradient">Services</span>
+              Our <span className="text-gold-gradient">Services</span>
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Comprehensive digital marketing solutions engineered for businesses
-              that demand excellence. Every service, fit for a king.
+              Comprehensive digital marketing and AI solutions engineered for businesses
+              that demand excellence.
             </p>
           </motion.div>
         </div>

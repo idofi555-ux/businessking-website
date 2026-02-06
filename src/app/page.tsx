@@ -52,10 +52,22 @@ const services = [
     icon: '🤝',
   },
   {
-    title: 'PPC Ads Arbitrage',
-    description: 'Maximize ROI with precision-targeted advertising campaigns.',
-    features: ['Keyword Targeting', 'Ad Creatives', 'Optimization'],
+    title: 'PPC & Ads Arbitrage',
+    description: 'Acquire targeted traffic at lower cost and discover profitable niches through strategic ad arbitrage.',
+    features: ['Traffic Arbitrage', 'Campaign Scaling', 'ROI Optimization'],
     icon: '🎯',
+  },
+  {
+    title: 'AI Marketing Solutions',
+    description: 'Leverage artificial intelligence for predictive analytics, smart targeting, and automated campaign optimization.',
+    features: ['AI Analytics', 'Smart Targeting', 'Automation'],
+    icon: '🧠',
+  },
+  {
+    title: 'AI Technology',
+    description: 'Custom AI agents, intelligent automation, and data intelligence solutions to transform your operations.',
+    features: ['Custom AI Agents', 'Process Automation', 'Data Intelligence'],
+    icon: '⚡',
   },
 ];
 
@@ -121,7 +133,7 @@ export default function Home() {
             >
               Elevate Your Business
               <br />
-              <span className="text-gold-gradient">to Royalty</span>
+              <span className="text-gold-gradient">to the Top</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -207,7 +219,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <SectionHeading
             badge="Why Choose Us"
-            title="The Royal"
+            title="The King's"
             goldText="Advantage"
             description="Three pillars of excellence that set Business King apart from ordinary agencies."
           />
@@ -229,9 +241,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             badge="Our Services"
-            title="Royal"
+            title="Our"
             goldText="Services"
-            description="Comprehensive digital marketing solutions designed to build your empire."
+            description="Comprehensive digital marketing and AI solutions designed to accelerate your growth."
           />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -254,17 +266,17 @@ export default function Home() {
             ))}
 
             {/* CTA Card */}
-            <AnimatedCard delay={0.5} className="flex flex-col items-center justify-center text-center bg-gradient-to-br from-gold-500/10 to-gold-500/5">
+            <AnimatedCard delay={0.7} className="flex flex-col items-center justify-center text-center bg-gradient-to-br from-gold-500/10 to-gold-500/5">
               <div className="text-4xl mb-4">👑</div>
-              <h3 className="text-xl font-bold text-white mb-3">Ready to Rule?</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Need Something Custom?</h3>
               <p className="text-gray-400 text-sm mb-6">
-                Discover how our full suite of services can transform your business.
+                We tailor solutions to fit your exact business needs.
               </p>
               <Link
-                href="/services"
+                href="/contact"
                 className="px-6 py-3 bg-gold-gradient text-dark-500 font-semibold rounded-lg hover:shadow-lg hover:shadow-gold-500/25 transition-all duration-200"
               >
-                View All Services →
+                Get in Touch →
               </Link>
             </AnimatedCard>
           </div>
@@ -352,7 +364,7 @@ export default function Home() {
           >
             <div className="text-5xl mb-6">👑</div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Ready to Claim Your <span className="text-gold-gradient">Throne?</span>
+              Ready to <span className="text-gold-gradient">Dominate?</span>
             </h2>
             <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
               Join the ranks of businesses that have elevated their digital presence with
