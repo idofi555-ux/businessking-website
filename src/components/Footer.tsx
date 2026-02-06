@@ -16,6 +16,7 @@ const footerLinks = {
     { label: 'Our Mission', href: '/mission' },
     { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Release Notes', href: '/release-notes' },
   ],
   Legal: [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -77,9 +78,17 @@ export default function Footer() {
           <p className="text-tertiary text-xs">
             © {new Date().getFullYear()} Business King Holdings Limited. All rights reserved.
           </p>
-          <p className="text-tertiary text-xs opacity-60">
-            306 Victoria House, Victoria, Mahe, Seychelles
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-tertiary text-xs opacity-60">
+              306 Victoria House, Victoria, Mahe, Seychelles
+            </p>
+            <Link
+              href="/release-notes"
+              className="text-tertiary text-xs hover:text-gold transition-colors duration-200"
+            >
+              v1.0.0
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
